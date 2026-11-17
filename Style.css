@@ -117,8 +117,8 @@ body {
 
 .hero {
     position: relative;
-    padding-top: 80px;
-    opacity: 1;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 2;
     overflow: hidden;
 }
 
@@ -127,11 +127,12 @@ body {
 .hero-background {
     position: absolute;
     inset: 0;
-
+    z-index: 0;
     background-image: url("imges/bg-img.png");
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom 315px;
+
 }
 
 /* HERO GRADIENT */
