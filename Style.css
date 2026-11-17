@@ -140,25 +140,24 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-
+    z-index: 1;
     background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.4) 0%,
         rgba(0, 0, 0, 0.2) 50%,
-        var(--background) 100%
-    );
+        #F8F9FA calc(100% - 263px),
+        #F8F9FA 100%);
 }
 
 /* HERO CONTENT CONTAINER */
 
 .hero-container {
     position: relative;
-    z-index: 1;
-
-    height: 335.19px;
-
-    padding-left: 24px;
-    padding-right: 24px;
+    z-index: 2;
+    font-size: 60px;
+    justify-self: center;
+    padding-top: 591px;
+    text-align: center;
 }
 
 /* HERO HEADING CONTAINER */
@@ -172,45 +171,33 @@ body {
     justify-content: center;
 }
 
-.hero-heading {
-    height: 96px;
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: 0px;
-    text-align: center;
-    vertical-align: middle;
-
-    color: var(--text-white);
+.hero-title {
+  text-transform: uppercase;
+  font-size: 130px;
+  line-height: 1.195;
+  letter-spacing: -1.5px;
+  word-spacing: -10px;
+  color: var(--text-white);
 }
-
-
-/* HERO DESCRIPTION CONTAINER */
-
-.hero-description-container {
-    height: 115.19px;
-}
-
-/* HERO DESCRIPTION TEXT */
 
 .hero-description {
-    position: relative;
+  margin: 75px 0 133px 0;
+  line-height: 1.545;
+  word-spacing: -5px;
+  letter-spacing: -0.5px;
+  color: var(--shadow);
+}
 
-    height: 116px;
-
-    top: -1.3px;
-    left: 11.58px;
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0px;
-    text-align: center;
-
-    color: var(--text-white);
+.btn {
+  display: inline-block;
+  padding: 52px 110px;
+  background-color: var(--primary-accent);
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 
