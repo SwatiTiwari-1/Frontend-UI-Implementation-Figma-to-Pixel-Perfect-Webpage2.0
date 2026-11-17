@@ -1,63 +1,10 @@
-
 :root {
-    --font-family-base: "Plus Jakarta Sans", sans-serif;
-
-    --color-white: #FFFFFF;
-    --color-white-overlay: #FFFFFFE5;
-    --color-text-primary: #404850;
-    --color-brand-primary: #023E8A;
-    --color-brand-accent: #0077B6;
-    --color-brand-deep: #005D90;
-    --color-accent: #E9C46A;
-    --color-accent-text: #773E00;
-    --color-surface-soft: #F8F9FA;
-    --color-surface-muted: #F3F4F5;
-    --color-border: #E7E8E9;
-    --color-border-subtle: #EDEEEF;
-    --color-border-header: #BFC7D14D;
-    --color-decoration: #CDE5FF;
-    --color-shadow: #0000000D;
-    --color-overlay-strong: rgba(0, 0, 0, 0.4);
-    --color-overlay-soft: rgba(0, 0, 0, 0.2);
-
-    --space-1: 4px;
-    --space-2: 8px;
-    --space-3: 12px;
-    --space-4: 16px;
-    --space-6: 24px;
-    --space-8: 32px;
-    --space-12: 48px;
-    --space-16: 64px;
-    --space-24: 96px;
-
-    --font-size-sm: 14px;
-    --font-size-base: 16px;
-    --font-size-lg: 18px;
-    --font-size-xl: 28px;
-    --font-size-2xl: 40px;
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
-    --line-height-sm: 14px;
-    --line-height-base: 24px;
-    --line-height-heading: 39.2px;
-    --line-height-hero: 48px;
-    --line-height-description: 28.8px;
-    --letter-spacing-wide: 0.7px;
-    --letter-spacing-tight: -0.7px;
-
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-pill: 9999px;
-    --border-width: 1px;
-    --shadow-subtle: 0px 1px 2px 0px var(--color-shadow);
-    --blur-header: 12px;
-    --blur-decoration: 64px;
-    --header-content-height: 80px;
-    --hero-height: 780px;
+    --primary: #023E8A;
+    --accent: #E9C46A;
+    --card: #FFFFFF;
+    --background: #F8F9FA;
+    --text-white: #FFFFFF;
+    --text-black: #000000;
 }
 
 * {
@@ -68,30 +15,23 @@
 
 body {
     margin: 0 auto;
-    font-family: var(--font-family-base);
-    background: var(--color-white);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: var(--background);
 }
-
-/* HEADER */
-
 
 /* HEADER */
 .header {
     position: relative;
-    z-index: 1000;
-
-    height: 81px;
-    background: var(--color-white-overlay);
-    border-bottom: var(--border-width) solid var(--color-border-header);
-    box-shadow: var(--shadow-subtle);
-    backdrop-filter: blur(var(--blur-header));
-    -webkit-backdrop-filter: blur(var(--blur-header));
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 5px solid #BFC7D14D;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .header-container {
-    height: var(--header-content-height);
-    padding-left: var(--space-4);
-    padding-right: var(--space-4);
+    height: 312px;
+    padding: 0 94px 0 63px;
 
     display: flex;
     align-items: center;
@@ -99,80 +39,85 @@ body {
 }
 
 .logo {
-    height: 40px;
     display: flex;
     align-items: center;
 
-    color: var(--color-brand-primary);
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-heading);
-    letter-spacing: var(--letter-spacing-tight);
+    color: var(--primary);
+    font-size: 110px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -4px;
     text-decoration: none;
+    vertical-align: middle;
 }
 
 .menu-button {
+    margin-bottom: 9px;
+    width: 87px;
+    height: 60px;
     border: none;
     background: transparent;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
 }
 
-.menu-button svg {
-    display: block;
+.header-menu {
+    position: relative;
+}
+
+.menu-stroke {
+    width: 100%;
+    height: 10px;
+    background: #005D90;
 }
 
 /* HEADER NAVIGATION */
 .header-nav {
     display: none;
-    height: var(--header-content-height);
-    align-items: center;
-    justify-content: space-between;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 2;
+    min-width: 180px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--card);
+    box-shadow: 0 4px 16px #0000001A;
 }
 
 .header-nav a {
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-brand-primary);
+    display: block;
+    padding: 10px 12px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary);
     text-decoration: none;
     white-space: nowrap;
 }
 
 .header-nav .header-book-btn {
-    padding: 10px 14px;
-    border-radius: var(--radius-sm);
-    background: var(--color-accent);
-    color: var(--color-accent-text);
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--text-black);
 }
 
-/* MENU OPEN */
-.header.menu-open .logo {
-    display: none;
-}
-
-.header.menu-open .header-nav {
+/* Reveal the navigation while hovering the menu or tabbing through it. */
+.header-menu:hover .header-nav,
+.header-menu:focus-within .header-nav {
     display: flex;
-}
-
-.header.menu-open .menu-button {
-    display: none;
-}
-
-
-/* MAIN CONTENT */
-
-.main-content {
-    height: 3756px;
 }
 
 /* HERO SECTION */
 
 .hero {
     position: relative;
-    height: var(--hero-height);
-    min-height: 600px;
-    padding-top: var(--header-content-height);
+    padding-top: 80px;
     opacity: 1;
     overflow: hidden;
 }
@@ -182,7 +127,6 @@ body {
 .hero-background {
     position: absolute;
     inset: 0;
-    height: var(--hero-height);
 
     background-image: url("imges/bg-img.png");
     background-size: cover;
@@ -198,9 +142,9 @@ body {
 
     background: linear-gradient(
         180deg,
-        var(--color-overlay-strong) 0%,
-        var(--color-overlay-soft) 50%,
-        var(--color-surface-soft) 100%
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        var(--background) 100%
     );
 }
 
@@ -212,8 +156,8 @@ body {
 
     height: 335.19px;
 
-    padding-left: var(--space-4);
-    padding-right: var(--space-4);
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 /* HERO HEADING CONTAINER */
@@ -221,7 +165,7 @@ body {
 
 .hero-heading-container {
     height: 120px;
-    padding-bottom: var(--space-6);
+    padding-bottom: 24px;
 
     display: flex;
     justify-content: center;
@@ -230,15 +174,15 @@ body {
 .hero-heading {
     height: 96px;
 
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-extrabold);
-    font-size: var(--font-size-2xl);
-    line-height: var(--line-height-hero);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
     letter-spacing: 0px;
     text-align: center;
     vertical-align: middle;
 
-    color: var(--color-white);
+    color: var(--text-white);
 }
 
 
@@ -258,14 +202,14 @@ body {
     top: -1.3px;
     left: 11.58px;
 
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-lg);
-    line-height: var(--line-height-description);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0px;
     text-align: center;
 
-    color: var(--color-white-overlay);
+    color: var(--text-white);
 }
 
 
@@ -276,11 +220,11 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: var(--space-16);
+    gap: 64px;
 
-    padding: var(--space-24) var(--space-4);
+    padding: 64px 24px;
 
-    background: var(--color-surface-soft);
+    background: var(--background);
     opacity: 1;
 }
 
@@ -290,7 +234,7 @@ body {
     height: 88px;
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    gap: 24px;
     opacity: 1;
 }
 
@@ -301,14 +245,14 @@ body {
 
 .destination-subheading-container p {
     height: 48px;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0;
     text-align: center;
     vertical-align: middle;
-    color: var(--color-text-primary);
+    color: var(--text-black);
 }
 
 /* HEADING 2 */
@@ -324,14 +268,14 @@ body {
 .destination-heading h2 {
     height: 24px;
 
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0px;
     text-align: center;
 
-    color: var(--color-brand-primary);
+    color: var(--primary);
 }
 
 /* DESTINATION GRID */
@@ -342,7 +286,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 475px);
-    gap: var(--space-6);
+    gap: 24px;
 
     opacity: 1;
 }
@@ -352,9 +296,9 @@ body {
 .destination-card {
     height: 475px;
 
-    background: var(--color-white);
-    border: var(--border-width) solid var(--color-border);
-    border-radius: var(--radius-md);
+    background: var(--card);
+    border: 1px solid #E7E8E9;
+    border-radius: 12px;
 
     overflow: hidden;
     opacity: 1;
@@ -385,8 +329,8 @@ body {
 
 .price-badge {
     position: absolute;
-    top: var(--space-4);
-    right: var(--space-4);
+    top: 24px;
+    right: 24px;
     left: auto;
 
     height: 22px;
@@ -395,24 +339,24 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: var(--space-1) var(--space-3);
-    border-radius: var(--radius-pill);
+    padding: 8px 8px;
+    border-radius: 9999px;
 
-    background: var(--color-accent);
-    box-shadow: var(--shadow-subtle);
+    background: var(--accent);
+    box-shadow: 0px 1px 2px 0px #0000000D;
 }
 
 
 .price-badge span {
     height: 14px;
 
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-sm);
-    line-height: var(--line-height-sm);
-    letter-spacing: var(--letter-spacing-wide);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.7px;
 
-    color: var(--color-accent-text);
+    color: var(--text-black);
     white-space: nowrap;
 }
 
@@ -421,7 +365,7 @@ body {
 .destination-card-content {
     height: 206px;
 
-    padding: var(--space-6);
+    padding: 24px;
 
     display: flex;
     flex-direction: column;
@@ -434,19 +378,19 @@ body {
 .destination-title-container {
     height: 48px;
 
-    padding-bottom: var(--space-2);
+    padding-bottom: 8px;
 }
 
 .destination-title-container h3 {
     height: 40px;
 
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xl);
-    line-height: var(--line-height-heading);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
     letter-spacing: 0px;
 
-    color: var(--color-brand-accent);
+    color: var(--primary);
 }
 
 /* CARD DESCRIPTION */
@@ -454,19 +398,19 @@ body {
 .destination-description-container {
     height: 72px;
 
-    padding-bottom: var(--space-6);
+    padding-bottom: 24px;
 }
 
 .destination-description-container p {
     height: 48px;
 
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0px;
 
-    color: var(--color-text-primary);
+    color: var(--text-black);
 }
 
 /* LEARN MORE BUTTON */
@@ -474,39 +418,39 @@ body {
 .destination-button {
     height: 38px;
 
-    padding-top: var(--space-3);
-    padding-bottom: var(--space-3);
+    padding-top: 8px;
+    padding-bottom: 8px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     border: none;
-    border-radius: var(--radius-sm);
+    border-radius: 8px;
 
-    background: var(--color-accent);
+    background: var(--accent);
     cursor: pointer;
 }
 
 .destination-button span {
     height: 14px;
 
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-sm);
-    line-height: var(--line-height-sm);
-    letter-spacing: var(--letter-spacing-wide);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.7px;
     text-align: center;
 
-    color: var(--color-accent-text);
+    color: var(--text-black);
 }
 
 
 /* ABOUT SECTION */
 .about-section {
     height: 636px;
-    padding: var(--space-24) var(--space-4);
-    background: var(--color-surface-muted);
+    padding: 64px 24px;
+    background: var(--background);
     opacity: 1;
 }
 
@@ -514,7 +458,7 @@ body {
     height: 444px;
     display: flex;
     flex-direction: column;
-    gap: var(--space-8);
+    gap: 24px;
     opacity: 1;
 }
 
@@ -528,25 +472,25 @@ body {
 
 .about-heading-container h2 {
     height: 24px;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0;
     text-align: center;
     vertical-align: middle;
-    color: var(--color-brand-primary);
+    color: var(--primary);
 }
 
 /* ABOUT CARD */
 .about-card {
     position: relative;
     height: 388px;
-    padding: var(--space-8);
-    border: var(--border-width) solid var(--color-border-subtle);
-    border-radius: var(--radius-lg);
-    background: var(--color-white);
-    box-shadow: var(--shadow-subtle);
+    padding: 24px;
+    border: 1px solid #EDEEEF;
+    border-radius: 16px;
+    background: var(--card);
+    box-shadow: 0px 1px 2px 0px #0000000D;
     overflow: hidden;
     opacity: 1;
 }
@@ -558,10 +502,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: var(--radius-pill);
-    background: var(--color-decoration);
+    border-radius: 9999px;
+    background: var(--primary);
     opacity: 0.3;
-    filter: blur(var(--blur-decoration));
+    filter: blur(64px);
     pointer-events: none;
 }
 
@@ -575,28 +519,28 @@ body {
 
 .about-text-container p {
     height: 322px;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-lg);
-    line-height: 29.25px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0;
     text-align: center;
     vertical-align: middle;
-    color: var(--color-text-primary);
+    color: var(--text-black);
 }
 
 
 /* FOOTER */
 .footer {
     height: 279px;
-    border-top: var(--border-width) solid var(--color-border-subtle);
-    background: var(--color-white);
+    border-top: 1px solid #EDEEEF;
+    background: var(--card);
     opacity: 1;
 }
 
 .footer-container {
     height: 278px;
-    padding: var(--space-12) var(--space-4);
+    padding: 64px 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -613,12 +557,12 @@ body {
     height: 40px;
     display: flex;
     align-items: center;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xl);
-    line-height: var(--line-height-heading);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
     letter-spacing: 0;
-    color: var(--color-brand-primary);
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -629,18 +573,18 @@ body {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-content: space-between;
-    column-gap: var(--space-6);
-    row-gap: var(--space-6);
+    column-gap: 24px;
+    row-gap: 24px;
 }
 
 .footer-link {
     height: 24px;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0;
-    color: var(--color-text-primary);
+    color: var(--text-black);
     text-decoration: none;
     white-space: nowrap;
 }
@@ -650,7 +594,7 @@ body {
     height: 70px;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    gap: 8px;
     opacity: 1;
 }
 
@@ -662,12 +606,12 @@ body {
 
 .footer-copyright {
     height: 48px;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0;
-    color: var(--color-text-primary);
+    color: var(--text-black);
 }
 
 /* BACK TO TOP */
@@ -677,12 +621,12 @@ body {
     align-items: center;
     align-self: flex-end;
     gap: 3.99px;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-sm);
-    line-height: var(--line-height-sm);
-    letter-spacing: var(--letter-spacing-wide);
-    color: var(--color-brand-deep);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.7px;
+    color: var(--primary);
     text-decoration: none;
 }
 

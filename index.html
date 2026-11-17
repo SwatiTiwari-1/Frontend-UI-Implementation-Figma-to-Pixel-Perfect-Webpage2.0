@@ -22,19 +22,20 @@
 
         <a href="#home" class="logo">Wanderlust</a>
 
-        <nav class="header-nav" id="headerNav">
-            <a href="#home">Home</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#about">About Us</a>
-            <a href="#booking" class="header-book-btn">Book Now</a>
-        </nav>
+        <div class="header-menu">
+            <button class="menu-button" aria-label="Show navigation">
+                <span class="menu-stroke"></span>
+                <span class="menu-stroke"></span>
+                <span class="menu-stroke"></span>
+            </button>
 
-        <button class="menu-button" id="menuButton" aria-label="Toggle menu">
-            <svg width="22.5" height="15" viewBox="0 0 22.5 15" fill="none">
-                <path d="M0 1H22.5M0 7.5H22.5M0 14H22.5"
-              stroke="#005D90" stroke-width="1.8"/>
-        </svg>
-        </button>
+            <nav class="header-nav">
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#about">About Us</a>
+                <a href="#booking" class="header-book-btn">Book Now</a>
+            </nav>
+        </div>
 
     </div>
 </header>
@@ -273,9 +274,6 @@ tech.
 </footer>
 
     </main>
-
-   
-    <script src="app.js"></script>
 
 </body>
 </html>
