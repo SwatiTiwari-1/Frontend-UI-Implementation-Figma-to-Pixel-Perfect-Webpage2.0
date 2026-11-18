@@ -223,7 +223,7 @@ body {
 .destination-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 109px;
+  gap: 110px;
 }
 
 .destination-card {
@@ -286,8 +286,8 @@ body {
 
 .destination-desc {
   font-size: 60px;
-  word-spacing: -1px;
-  line-height: 1.5;
+  word-spacing: 7.5px;
+  line-height: 1.55;
   margin-bottom: 89px;
 }
 
