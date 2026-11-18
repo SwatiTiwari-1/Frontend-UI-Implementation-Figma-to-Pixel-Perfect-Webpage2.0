@@ -8,7 +8,7 @@
     --input-bg: #E8EAEF;
      /* Layout & Spacing */
     --radius: 150px;
-    --radius-sm: 30px;
+    --radius-sm: 40px;
 }
 
 * {
@@ -198,11 +198,11 @@ body {
 /* DESTINATION HEADING CONTAINER */
 
 .destination-container {
-  margin: 0 55px;
+  margin: 0 65px;
 }
 
 .destination-heading {
-  margin: 65px 0 204px 0;
+  margin: 103px 0 204px 0;
   text-align: center;
 }
 
@@ -223,7 +223,7 @@ body {
 .destination-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 77px;
+  gap: 109px;
 }
 
 .destination-card {
@@ -256,44 +256,47 @@ body {
 
 .destination-price {
   position: absolute;
-  top: 52px;
-  right: 52px;
-  padding: 0 35px;
+  top: 62px;
+  right: 62px;
+  padding: 6px 45px;
   background-color: var(--secondary-accent);
   color: var(--text-dark);
-  font-size: 48px;
+  font-size: 58px;
   font-weight: 500;
   letter-spacing: 0.025em;
   border-radius: var(--radius-sm);
 }
 
 .destination-info {
-  padding: 77px 70px 77px 75px;
+  padding: 94px 92px 87px 95px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
-  font-size: 47px;
+  font-size: 57px;
 }
 
 .destination-title {
-  font-size: 91px;
+  font-size: 110px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
   color: var(--primary-accent);
 }
 
 .destination-desc {
-  font-size: 52px;
-  word-spacing: -7px;
-  margin-bottom: 75px;
+  font-size: 60px;
+  word-spacing: -1px;
+  line-height: 1.5;
+  margin-bottom: 89px;
 }
 
 .destination-btn {
+  text-decoration: none;
+  color: var(--text-dark);
   text-align: center;
   display: inline-block;
-  padding: 27px 110px;
+  padding: 37px 0;
   background-color: var(--secondary-accent);
   font-weight: 500;
   letter-spacing: 0.025em;
