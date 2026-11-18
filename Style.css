@@ -132,7 +132,7 @@ body {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-image: url("imges/bg-img.png");
+    background-image: url("images/bg-img.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center bottom 315px;
@@ -220,172 +220,88 @@ body {
   line-height: 1.5;
 }
 
-/* DESTINATION GRID */
-
 .destination-grid {
-    height: 1996px;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 475px);
-    gap: 24px;
-
-    opacity: 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 77px;
 }
-
-/* DESTINATION CARD */
 
 .destination-card {
-    height: 475px;
-
-    background: var(--bg-card);
-    border: 1px solid var(--text-dark);
-    border-radius: 12px;
-
-    overflow: hidden;
-    opacity: 1;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border: 3px solid var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-/* CARD IMAGE CONTAINER */
-
-.destination-image-container {
-    position: relative;
-
-    height: 267px;
-
-    overflow: hidden;
-    opacity: 1;
+.destination-card:hover {
+  transform: translateY(-6px);
 }
 
-/* CARD IMAGE */
-
-.destination-image-container img {
-    height: 267px;
-
-    display: block;
-    object-fit: cover;
+.destination-cover {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* PRICE BADGE */
-
-
-.price-badge {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    left: auto;
-
-    height: 22px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 8px 8px;
-    border-radius: 9999px;
-
-    background: var(--secondary-accent);
-    box-shadow: 0px 1px 2px 0px var(--text-dark);
+.destination-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
 }
 
-
-.price-badge span {
-    height: 14px;
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 14px;
-    letter-spacing: 0.7px;
-
-    color: var(--text-dark);
-    white-space: nowrap;
+.destination-price {
+  position: absolute;
+  top: 52px;
+  right: 52px;
+  padding: 0 35px;
+  background-color: var(--secondary-accent);
+  color: var(--text-dark);
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  border-radius: var(--radius-sm);
 }
 
-/* CARD CONTENT */
-
-.destination-card-content {
-    height: 206px;
-
-    padding: 24px;
-
-    display: flex;
-    flex-direction: column;
-
-    opacity: 1;
+.destination-info {
+  padding: 77px 70px 77px 75px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  font-size: 47px;
 }
 
-/* CARD TITLE */
-
-.destination-title-container {
-    height: 48px;
-
-    padding-bottom: 8px;
+.destination-title {
+  font-size: 91px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--primary-accent);
 }
 
-.destination-title-container h3 {
-    height: 40px;
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0px;
-
-    color: var(--primary-accent);
+.destination-desc {
+  font-size: 52px;
+  word-spacing: -7px;
+  margin-bottom: 75px;
 }
 
-/* CARD DESCRIPTION */
-
-.destination-description-container {
-    height: 72px;
-
-    padding-bottom: 24px;
+.destination-btn {
+  text-align: center;
+  display: inline-block;
+  padding: 27px 110px;
+  background-color: var(--secondary-accent);
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.destination-description-container p {
-    height: 48px;
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0px;
-
-    color: var(--text-black);
-}
-
-/* LEARN MORE BUTTON */
-
-.destination-button {
-    height: 38px;
-
-    padding-top: 8px;
-    padding-bottom: 8px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: none;
-    border-radius: 8px;
-
-    background: var(--secondary-accent);
-    cursor: pointer;
-}
-
-.destination-button span {
-    height: 14px;
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 14px;
-    letter-spacing: 0.7px;
-    text-align: center;
-
-    color: var(--text-dark);
-}
 
 
 /* ABOUT SECTION */
