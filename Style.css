@@ -7,7 +7,7 @@
     --text-dark: #6C6C6C;
     --input-bg: #E8EAEF;
      /* Layout & Spacing */
-    --radius: 100px;
+    --radius: 150px;
     --radius-sm: 30px;
 }
 
@@ -174,7 +174,7 @@ body {
 }
 
 .hero-description {
-  margin: 93px 0 180px 0;
+  margin: 93px 0 165px 0;
   line-height: 1.57;
   word-spacing: -3px;
   letter-spacing: 0.3px;
@@ -183,7 +183,7 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 52px 110px;
+  padding: 72px 130px;
   background-color: var(--primary-accent);
   color: var(--text);
   font-weight: 500;
@@ -208,15 +208,16 @@ body {
 
 .section-title {
   color: var(--primary-accent);
-  padding-bottom: 51px;
+  padding-bottom: 74px;
   font-size: 62px;
   font-weight: 500;
 }
 
 .section-subtitle {
-  font-size: 52px;
+  font-size: 63px;
   font-weight: 500;
   letter-spacing: -0.6px;
+  line-height: 1.5;
 }
 
 /* DESTINATION GRID */
