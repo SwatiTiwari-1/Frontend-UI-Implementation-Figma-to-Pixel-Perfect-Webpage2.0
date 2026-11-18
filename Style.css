@@ -201,7 +201,7 @@ body {
   margin: 0 65px;
 }
 
-.destination-heading {
+.section-header {
   margin: 66px 0 245px 0;
   text-align: center;
 }
@@ -311,15 +311,16 @@ body {
 
 .about-container {
     text-align: center;
-    padding: 755px 50px 315px 50px;
+    padding: 692px 50px 315px 50px;
 }
 
 .about-card {
+  margin-top: 60px;
   background: var(--bg-card);
   border: 3px solid var(--shadow);
   border-radius: var(--radius-sm);
-  padding: 107px 80px;
-  font-size: 60px;
+  padding: 127px 80px;
+  font-size: 72px;
   letter-spacing: -0.95px;
   line-height: 1.57;
   display: flex;
