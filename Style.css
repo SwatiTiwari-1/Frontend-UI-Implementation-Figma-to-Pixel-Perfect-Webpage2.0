@@ -202,13 +202,13 @@ body {
 }
 
 .destination-heading {
-  margin: 103px 0 204px 0;
+  margin: 66px 0 245px 0;
   text-align: center;
 }
 
 .section-title {
   color: var(--primary-accent);
-  padding-bottom: 74px;
+  padding-bottom: 70px;
   font-size: 62px;
   font-weight: 500;
 }
@@ -308,88 +308,25 @@ body {
 
 
 /* ABOUT SECTION */
-.about-section {
-    height: 636px;
-    padding: 64px 24px;
-    background: var(--background);
-    opacity: 1;
-}
 
 .about-container {
-    height: 444px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    opacity: 1;
-}
-
-/* ABOUT HEADING */
-.about-heading-container {
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-heading-container h2 {
-    height: 24px;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0;
     text-align: center;
-    vertical-align: middle;
-    color: var(--primary-accent);
+    padding: 755px 50px 315px 50px;
 }
 
-/* ABOUT CARD */
 .about-card {
-    position: relative;
-    height: 388px;
-    padding: 24px;
-    border: 1px solid var(--text-dark);
-    border-radius: 16px;
-    background: var(--bg-card);
-    box-shadow: 0px 1px 2px 0px var(--text-dark);
-    overflow: hidden;
-    opacity: 1;
+  background: var(--bg-card);
+  border: 3px solid var(--shadow);
+  border-radius: var(--radius-sm);
+  padding: 107px 80px;
+  font-size: 60px;
+  letter-spacing: -0.95px;
+  line-height: 1.57;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-
-/* DECORATIVE BACKGROUND */
-.about-decoration {
-    position: absolute;
-    height: 256px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 9999px;
-    background: var(--primary-accent);
-    opacity: 0.3;
-    filter: blur(64px);
-    pointer-events: none;
-}
-
-/* ABOUT TEXT */
-.about-text-container {
-    position: relative;
-    z-index: 1;
-    height: 322px;
-    opacity: 1;
-}
-
-.about-text-container p {
-    height: 322px;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0;
-    text-align: center;
-    vertical-align: middle;
-    color: var(--text-black);
-}
-
 
 /* FOOTER */
 .footer {
